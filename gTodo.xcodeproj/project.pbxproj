@@ -12,6 +12,7 @@
 		483125E8209F2FC2009A3096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483125E6209F2FC2009A3096 /* Main.storyboard */; };
 		483125EA209F2FC6009A3096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483125E9209F2FC6009A3096 /* Assets.xcassets */; };
 		483125ED209F2FC6009A3096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483125EB209F2FC6009A3096 /* LaunchScreen.storyboard */; };
+		5CAB4A514DD555EB2D0B4A9D /* Pods_gTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28A9E810E35EE8FDC4434D0 /* Pods_gTodo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		483125E9209F2FC6009A3096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483125EC209F2FC6009A3096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483125EE209F2FC6009A3096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6727B329E95790AEE1DA390B /* Pods-gTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gTodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-gTodo/Pods-gTodo.release.xcconfig"; sourceTree = "<group>"; };
+		AE07D913F95A7DD399C96C49 /* Pods-gTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gTodo/Pods-gTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		F28A9E810E35EE8FDC4434D0 /* Pods_gTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAB4A514DD555EB2D0B4A9D /* Pods_gTodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F42A07114C15382602EA7EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE07D913F95A7DD399C96C49 /* Pods-gTodo.debug.xcconfig */,
+				6727B329E95790AEE1DA390B /* Pods-gTodo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		483125D6209F2FC2009A3096 = {
 			isa = PBXGroup;
 			children = (
 				483125E1209F2FC2009A3096 /* gTodo */,
 				483125E0209F2FC2009A3096 /* Products */,
+				2F42A07114C15382602EA7EB /* Pods */,
+				8F13EB6B50B6B0AB8EE58CFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = gTodo;
 			sourceTree = "<group>";
 		};
+		8F13EB6B50B6B0AB8EE58CFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F28A9E810E35EE8FDC4434D0 /* Pods_gTodo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 483125F1209F2FC6009A3096 /* Build configuration list for PBXNativeTarget "gTodo" */;
 			buildPhases = (
+				81E55BB28F8D2B2CA625C4F1 /* [CP] Check Pods Manifest.lock */,
 				483125DB209F2FC2009A3096 /* Sources */,
 				483125DC209F2FC2009A3096 /* Frameworks */,
 				483125DD209F2FC2009A3096 /* Resources */,
+				01E400A7AB63DC7C64AE2E7B /* [CP] Embed Pods Frameworks */,
+				0C9DA7FF1C114ED9154DC809 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01E400A7AB63DC7C64AE2E7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gTodo/Pods-gTodo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gTodo/Pods-gTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C9DA7FF1C114ED9154DC809 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gTodo/Pods-gTodo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gTodo/Pods-gTodo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81E55BB28F8D2B2CA625C4F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gTodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		483125DB209F2FC2009A3096 /* Sources */ = {
@@ -278,6 +368,7 @@
 		};
 		483125F2209F2FC6009A3096 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE07D913F95A7DD399C96C49 /* Pods-gTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +387,7 @@
 		};
 		483125F3209F2FC6009A3096 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6727B329E95790AEE1DA390B /* Pods-gTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
