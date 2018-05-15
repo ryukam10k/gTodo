@@ -83,7 +83,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         if let taskLists = response.items, !taskLists.isEmpty {
             for taskList in taskLists {
                 // The API field "id" is renamed "identifier" in this library.
-                outputText += "\(taskList.title ?? "") (\(taskList.identifier!))\n"
+                //outputText += "\(taskList.title ?? "") (\(taskList.identifier!))\n"
+                outputText += "\(taskList.title ?? "")\n"
             }
         } else {
             outputText = "No task lists found."
